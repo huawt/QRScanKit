@@ -1,0 +1,17 @@
+//
+//  main.m
+//  QRScanKit
+//
+//  Created by huawentao on 07/26/2019.
+//  Copyright (c) 2019 huawentao. All rights reserved.
+//
+
+@import UIKit;
+#import "QRAppDelegate.h"
+
+int main(int argc, char * argv[])
+{
+    @autoreleasepool {
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([QRAppDelegate class]));
+    }
+}

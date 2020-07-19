@@ -1,0 +1,12 @@
+
+platform :ios, '8.0'
+
+target 'QRScanKit_Example' do
+  pod 'QRScanKit', :path => '../'
+  
+  target 'QRScanKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

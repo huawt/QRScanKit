@@ -1,0 +1,1 @@
+../../../LRTools/LRTools/Classes/NSString+Addtionss.h

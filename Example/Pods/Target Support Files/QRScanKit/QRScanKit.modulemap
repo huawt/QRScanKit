@@ -1,0 +1,6 @@
+framework module QRScanKit {
+  umbrella header "QRScanKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

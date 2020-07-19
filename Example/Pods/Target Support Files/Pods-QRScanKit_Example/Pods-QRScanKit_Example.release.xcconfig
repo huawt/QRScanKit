@@ -1,0 +1,11 @@
+EXCLUDED_SOURCE_FILE_NAMES[sdk=iphoneos*][arch=*] = ZBarReaderViewImpl_Simulator.m
+EXCLUDED_SOURCE_FILE_NAMES[sdk=iphonesimulator*][arch=*] = ZBarReaderViewImpl_Capture.m ZBarCaptureReader.m
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1 NDEBUG=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/LRTools" "${PODS_ROOT}/Headers/Public/Masonry" "${PODS_ROOT}/Headers/Public/QRScanKit" "${PODS_ROOT}/Headers/Public/TLToastHUD" "${PODS_ROOT}/Headers/Public/ZBarSDK" "${PODS_ROOT}/Headers/Public/ZXingObjC" $(SDKROOT)/usr/include/
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/LRTools" "${PODS_CONFIGURATION_BUILD_DIR}/Masonry" "${PODS_CONFIGURATION_BUILD_DIR}/QRScanKit" "${PODS_CONFIGURATION_BUILD_DIR}/TLToastHUD" "${PODS_CONFIGURATION_BUILD_DIR}/ZBarSDK" "${PODS_CONFIGURATION_BUILD_DIR}/ZXingObjC"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"LRTools" -l"Masonry" -l"QRScanKit" -l"TLToastHUD" -l"ZBarSDK" -l"ZXingObjC" -l"iconv" -framework "AVFoundation" -framework "CoreGraphics" -framework "CoreImage" -framework "CoreMedia" -framework "CoreVideo" -framework "Foundation" -framework "ImageIO" -framework "QuartzCore" -framework "UIKit"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES
