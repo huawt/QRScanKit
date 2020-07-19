@@ -1,0 +1,1 @@
+../../../ZXingObjCFork/ZXingObjC/oned/ZXCode39Writer.h

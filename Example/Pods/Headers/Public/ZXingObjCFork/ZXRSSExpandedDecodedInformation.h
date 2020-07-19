@@ -1,0 +1,1 @@
+../../../ZXingObjCFork/ZXingObjC/oned/rss/expanded/decoders/ZXRSSExpandedDecodedInformation.h

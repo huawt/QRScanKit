@@ -1,0 +1,1 @@
+../../../ZXingObjCFork/ZXingObjC/oned/ZXUPCEANExtension2Support.h

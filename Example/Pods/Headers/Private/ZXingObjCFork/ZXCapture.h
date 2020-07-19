@@ -1,0 +1,1 @@
+../../../ZXingObjCFork/ZXingObjC/client/ZXCapture.h

@@ -848,7 +848,7 @@ That's all there is to it!
 			<key>License</key>
 			<string>Apache License 2.0</string>
 			<key>Title</key>
-			<string>ZXingObjC</string>
+			<string>ZXingObjCFork</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

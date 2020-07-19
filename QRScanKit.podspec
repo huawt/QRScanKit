@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QRScanKit'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'QRScanKit.'
   s.homepage         = 'https://github.com/huawt/QRScanKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.resource = 'QRScanKit/ScanResource.bundle'
 
   s.frameworks = 'UIKit', 'Foundation', 'AVFoundation', 'CoreImage', 'CoreGraphics'
-  s.dependency 'ZXingObjC', '~> 3.6'
+  s.dependency 'ZXingObjCFork', '~> 3.6.5'
   s.dependency 'ZBarSDK', '~> 1.3'
   s.dependency 'Masonry'
   s.dependency 'TLToastHUD'

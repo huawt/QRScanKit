@@ -1,0 +1,1 @@
+../../../ZXingObjCFork/ZXingObjC/qrcode/detector/ZXQRCodeAlignmentPatternFinder.h

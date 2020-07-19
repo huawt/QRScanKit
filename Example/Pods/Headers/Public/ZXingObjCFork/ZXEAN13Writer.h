@@ -1,0 +1,1 @@
+../../../ZXingObjCFork/ZXingObjC/oned/ZXEAN13Writer.h

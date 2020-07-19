@@ -600,7 +600,7 @@ That's all there is to it!
 
 
 
-## ZXingObjC
+## ZXingObjCFork
 
                                  Apache License
                            Version 2.0, January 2004

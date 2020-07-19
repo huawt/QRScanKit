@@ -1,0 +1,1 @@
+../../../ZXingObjCFork/ZXingObjC/common/ZXGlobalHistogramBinarizer.h

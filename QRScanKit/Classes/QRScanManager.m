@@ -2,7 +2,7 @@
 #import "QRScanManager.h"
 #import <CoreImage/CoreImage.h>
 #import <CoreGraphics/CoreGraphics.h>
-#import <ZXingObjC/ZXingObjC.h>
+#import <ZXingObjCFork/ZXingObjC.h>
 #import <ZBarSDK/ZBarSDK.h>
 #import "QRScanResultModel.h"
 

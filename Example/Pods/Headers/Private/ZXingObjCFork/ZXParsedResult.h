@@ -1,0 +1,1 @@
+../../../ZXingObjCFork/ZXingObjC/client/result/ZXParsedResult.h

@@ -1,0 +1,1 @@
+../../../ZXingObjCFork/ZXingObjC/qrcode/multi/ZXQRCodeMultiReader.h

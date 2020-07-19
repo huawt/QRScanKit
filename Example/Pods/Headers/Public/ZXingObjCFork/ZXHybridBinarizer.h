@@ -1,0 +1,1 @@
+../../../ZXingObjCFork/ZXingObjC/common/ZXHybridBinarizer.h

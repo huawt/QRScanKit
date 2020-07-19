@@ -1,0 +1,1 @@
+../../../ZXingObjCFork/ZXingObjC/core/ZXDimension.h

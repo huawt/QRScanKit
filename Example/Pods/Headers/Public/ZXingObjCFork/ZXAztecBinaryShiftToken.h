@@ -1,0 +1,1 @@
+../../../ZXingObjCFork/ZXingObjC/aztec/encoder/ZXAztecBinaryShiftToken.h

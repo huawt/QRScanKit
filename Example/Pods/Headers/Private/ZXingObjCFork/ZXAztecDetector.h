@@ -1,0 +1,1 @@
+../../../ZXingObjCFork/ZXingObjC/aztec/detector/ZXAztecDetector.h

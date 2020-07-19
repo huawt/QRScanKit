@@ -1,0 +1,1 @@
+../../../ZXingObjCFork/ZXingObjC/datamatrix/detector/ZXDataMatrixDetector.h

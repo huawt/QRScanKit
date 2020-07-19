@@ -1,0 +1,1 @@
+../../../ZXingObjCFork/ZXingObjC/datamatrix/decoder/ZXDataMatrixBitMatrixParser.h

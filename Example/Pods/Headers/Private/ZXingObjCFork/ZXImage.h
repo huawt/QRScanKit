@@ -1,0 +1,1 @@
+../../../ZXingObjCFork/ZXingObjC/client/ZXImage.h
