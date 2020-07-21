@@ -6,10 +6,10 @@
 @property (nonatomic, strong, readonly) id effectSetting;
 @end
 
-@interface MyBlurEffect : UIBlurEffect
+@interface CustomBlurEffect : UIBlurEffect
 @end
 
-@implementation MyBlurEffect
+@implementation CustomBlurEffect
 
 + (instancetype)effectWithStyle:(UIBlurEffectStyle)style
 {
@@ -59,7 +59,7 @@
 }
 
 
-- (void)popOverToViewController:(UIViewController*)viewController{
+- (void)presentAlertViewController:(UIViewController*)viewController{
     
     if ([[[UIApplication sharedApplication] keyWindow] isKindOfClass:[UIAlertController class]]) {
         return;

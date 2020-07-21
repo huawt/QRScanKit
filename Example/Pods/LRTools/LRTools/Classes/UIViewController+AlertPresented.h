@@ -3,7 +3,7 @@
 
 @interface UIViewController (AlertPresented) <UIPopoverPresentationControllerDelegate>
 
-- (void)popOverToViewController:(UIViewController *)viewController;
+- (void)presentAlertViewController:(UIViewController *)viewController;
 - (void)removeBlurEffect;
 
 @end

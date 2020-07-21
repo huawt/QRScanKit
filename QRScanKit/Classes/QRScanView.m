@@ -194,7 +194,7 @@
         
         UIViewController *viewController = [UIApplication sharedApplication].delegate.window.rootViewController;
         if (![viewController isKindOfClass:[UIAlertController class]]) {
-            [viewController popOverToViewController:alertController];
+            [viewController presentAlertViewController:alertController];
         } 
     }else {
         [self start];
