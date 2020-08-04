@@ -137,6 +137,13 @@
         if (!self.raylayer.superlayer) {
             [self.capturelayer addSublayer:self.raylayer];
         }
+    }else{
+        if (self.capturelayer.superlayer) {
+            [self.capturelayer removeFromSuperlayer];
+        }
+        if (self.raylayer.superlayer) {
+            [self.raylayer removeFromSuperlayer];
+        }
     }
     if (!self.previewlayer.superlayer) {
         [self.layer insertSublayer:self.previewlayer atIndex:0];
@@ -168,6 +175,15 @@
     _fullScreenScan = fullScreenScan;
     [self configCaputreWindow];
     [self fixPreviewOpacity];
+    [self configRectofInterest];
+}
+
+- (void)configRectofInterest{
+    if (self.fullScreenScan) {
+        [self.output setRectOfInterest:CGRectMake(0, 0, 1, 1)];
+    }else{
+        [self.output setRectOfInterest:CGRectMake(fy / self.frame.size.height, fx / kKDeviceWidth, fh / self.frame.size.height, fw / kKDeviceWidth)];
+    }
 }
 
 #pragma mark - 扫描
