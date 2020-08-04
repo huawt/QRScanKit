@@ -166,19 +166,8 @@
 
 - (void)setFullScreenScan:(BOOL)fullScreenScan{
     _fullScreenScan = fullScreenScan;
-    if (_fullScreenScan) {
-        if (self.capturelayer.superlayer) {
-            [self.capturelayer removeFromSuperlayer];
-        }
-        if (self.raylayer.superlayer) {
-            [self.raylayer removeFromSuperlayer];
-        }
-        for (UIView *subView in self.subviews) {
-            if (subView.tag > 100 && subView .tag< 105) {
-                [subView removeFromSuperview];
-            }
-        }
-    }
+    [self configCaputreWindow];
+    [self fixPreviewOpacity];
 }
 
 #pragma mark - 扫描
@@ -372,14 +361,14 @@
 
 - (void)fixPreviewOpacity
 {
-    if (self.fullScreenScan == NO) {
-        return;
-    }
-    
     for (UIView *subView in self.subviews) {
         if (subView.tag > 100 && subView .tag< 105) {
             [subView removeFromSuperview];
         }
+    }
+    
+    if (self.fullScreenScan == YES) {
+        return;
     }
     
     UIView *topLayer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kKDeviceWidth, fy)];
