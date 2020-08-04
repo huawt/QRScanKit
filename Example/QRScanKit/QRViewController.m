@@ -7,6 +7,7 @@
 //
 
 #import "QRViewController.h"
+#import <QRScanKit/QRScanKit.h>
 
 @interface QRViewController ()
 
@@ -18,6 +19,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    QRScanView *scan = [QRScanView scanViewWidthFrame:self.view.bounds scanDelegate:nil];
+    scan.fullScreenScan = YES;
+    [self.view addSubview:scan];
+    [scan startQRScan];
 }
 
 - (void)didReceiveMemoryWarning

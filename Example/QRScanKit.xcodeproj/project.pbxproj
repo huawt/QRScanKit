@@ -247,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = huawentao;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 9ZX7383TCA;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -502,6 +505,7 @@
 			baseConfigurationReference = F1D365EAA868266965EC6C50 /* Pods-QRScanKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9ZX7383TCA;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QRScanKit/QRScanKit-Prefix.pch";
 				INFOPLIST_FILE = "QRScanKit/QRScanKit-Info.plist";
@@ -518,6 +522,7 @@
 			baseConfigurationReference = 9895EF43F29FC9D56CFDB420 /* Pods-QRScanKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9ZX7383TCA;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QRScanKit/QRScanKit-Prefix.pch";
 				INFOPLIST_FILE = "QRScanKit/QRScanKit-Info.plist";

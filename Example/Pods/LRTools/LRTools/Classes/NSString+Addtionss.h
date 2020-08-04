@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)findStringToArrray:(NSMutableArray *)array keyValue:(NSString *)keyValue;
 -(NSDictionary *)urlStringToDictionary;
 
++ (NSString *)getFileMD5WithPath:(NSString*)path;
 - (NSString *)md5;
 - (NSString *)md5UsingEncoding:(NSStringEncoding)encoding;
 - (NSString *)middleString;
@@ -31,6 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (CGSize)sizeWithStringFontSize:(double)stringFontSize;
 - (CGSize)sizeWithContextSize:(CGSize)contextSize;
 - (CGSize)sizeCalculate;
+
+
 
 @end
 

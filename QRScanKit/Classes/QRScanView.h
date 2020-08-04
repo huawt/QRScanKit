@@ -35,6 +35,14 @@ NS_ASSUME_NONNULL_BEGIN
  是否显示闪光灯按钮
  */
 @property (nonatomic, assign) BOOL showLEDButton;
+/**
+扫描类型 小窗 还是全屏
+*/
+@property (nonatomic, assign) BOOL fullScreenScan;
+/**
+是否显示 对准提醒
+*/
+@property (nonatomic, assign) BOOL showScanRemind;
 
 /**
  生成扫描视图

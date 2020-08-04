@@ -10,10 +10,14 @@ FOUNDATION_EXPORT const unsigned char LRToosVersionString[];
 
 #import <LRToos/UIViewController+AlertPresented.h>
 #import <LRToos/NSString+Addtionss.h>
+#import <LRToos/UIViewController+DismissKeyboard.h>
+#import <LRToos/UIButton+Vertical.h>
 
 #else
 
 #import "UIViewController+AlertPresented.h"
 #import "NSString+Addtionss.h"
+#import "UIViewController+DismissKeyboard.h"
+#import "UIButton+Vertical.h"
 
 #endif

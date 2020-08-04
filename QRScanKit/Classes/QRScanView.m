@@ -10,7 +10,7 @@
 
 
 #define fx ((kKDeviceWidth - fw) / 2)
-#define fy (150 * (kIPhone5 ? 0.6 : 1))
+#define fy ((kKDeviceHeight / 2.0 - 125) * (kIPhone5 ? 0.6 : 1))
 #define fw (250 * (kIPhone5 ? 0.8 : 1))
 #define fh (250 * (kIPhone5 ? 0.8 : 1))
 #define kScanRayH 47
@@ -130,11 +130,13 @@
 
 - (void)configCaputreWindow
 {
-    if (!self.capturelayer.superlayer) {
-        [self.layer addSublayer:self.capturelayer];
-    }
-    if (!self.raylayer.superlayer) {
-        [self.capturelayer addSublayer:self.raylayer];
+    if (self.fullScreenScan == NO) {
+        if (!self.capturelayer.superlayer) {
+            [self.layer addSublayer:self.capturelayer];
+        }
+        if (!self.raylayer.superlayer) {
+            [self.capturelayer addSublayer:self.raylayer];
+        }
     }
     if (!self.previewlayer.superlayer) {
         [self.layer insertSublayer:self.previewlayer atIndex:0];
@@ -155,6 +157,28 @@
 {
     _showLEDButton = showLEDButton;
     self.flashlightBtn.hidden = !_showLEDButton;
+}
+
+- (void)setShowScanRemind:(BOOL)showScanRemind{
+    _showScanRemind = showScanRemind;
+    self.remindBtn.hidden = !_showScanRemind;
+}
+
+- (void)setFullScreenScan:(BOOL)fullScreenScan{
+    _fullScreenScan = fullScreenScan;
+    if (_fullScreenScan) {
+        if (self.capturelayer.superlayer) {
+            [self.capturelayer removeFromSuperlayer];
+        }
+        if (self.raylayer.superlayer) {
+            [self.raylayer removeFromSuperlayer];
+        }
+        for (UIView *subView in self.subviews) {
+            if (subView.tag > 100 && subView .tag< 105) {
+                [subView removeFromSuperview];
+            }
+        }
+    }
 }
 
 #pragma mark - 扫描
@@ -206,7 +230,9 @@
     if (!self.session.isRunning) {
         [self.session startRunning];
     }
-    [self startMoveScanLayer];
+    if (self.fullScreenScan == NO) {
+        [self startMoveScanLayer];
+    }
 }
 
 - (void)stopQRScan
@@ -346,6 +372,10 @@
 
 - (void)fixPreviewOpacity
 {
+    if (self.fullScreenScan == NO) {
+        return;
+    }
+    
     for (UIView *subView in self.subviews) {
         if (subView.tag > 100 && subView .tag< 105) {
             [subView removeFromSuperview];
