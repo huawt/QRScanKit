@@ -1,11 +1,11 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QRScanKit'
-  s.version          = '1.0.6'
+  s.version          = '1.0.7'
   s.summary          = 'QRScanKit.'
   s.homepage         = 'https://github.com/huawt/QRScanKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'huwt' => 'ghost263sky@163.com' }
+  s.author           = { 'huawt' => 'ghost263sky@163.com' }
   s.source           = { :git => 'https://github.com/huawt/QRScanKit.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'

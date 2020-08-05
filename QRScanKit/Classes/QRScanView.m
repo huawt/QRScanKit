@@ -8,11 +8,12 @@
 #define kKDeviceWidth [UIScreen mainScreen].bounds.size.width
 #define kKDeviceHeight [UIScreen mainScreen].bounds.size.height
 
+#define kCaptureWidth (kKDeviceWidth - 90)
 
 #define fx ((kKDeviceWidth - fw) / 2)
-#define fy ((kKDeviceHeight / 2.0 - 125) * (kIPhone5 ? 0.6 : 1))
-#define fw (250 * (kIPhone5 ? 0.8 : 1))
-#define fh (250 * (kIPhone5 ? 0.8 : 1))
+#define fy ((kKDeviceHeight / 2.0 - kCaptureWidth / 2.0) * (kIPhone5 ? 0.6 : 1))
+#define fw (kCaptureWidth * (kIPhone5 ? 0.8 : 1))
+#define fh (kCaptureWidth * (kIPhone5 ? 0.8 : 1))
 #define kScanRayH 47
 
 #define kFlashTopSpace (25 * (kIPhone5 ? 0.6 : 1))
@@ -27,16 +28,11 @@
 
 @property (nonatomic, weak) id<QRScanViewDelegate>delegate;
 
-@property (nonatomic, strong) CALayer *capturelayer;
-@property (nonatomic, strong) CALayer *raylayer;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *previewlayer;
 @property (nonatomic, strong) AVCaptureDevice *device;
 @property (nonatomic, strong) AVCaptureDeviceInput *input;
 @property (nonatomic, strong) AVCaptureMetadataOutput *output;
 @property (strong, nonatomic) AVCaptureSession * session;
-
-@property (nonatomic, strong) UIButton *flashlightBtn;
-@property (nonatomic, strong) UIButton *remindBtn;
 
 @end
 
@@ -348,7 +344,7 @@
         _capturelayer.masksToBounds = YES;
         _capturelayer.bounds = CGRectMake(0, 0, kScanWindowW, 0);
         _capturelayer.position = self.center;
-        _capturelayer.contents = (id)[UIImage imageNamed:@"ScanResource.bundle/扫一扫窗口"].CGImage;
+        _capturelayer.contents = (id)[UIImage imageNamed:@"ScanResource.bundle/scan_capture"].CGImage;
         _capturelayer.frame = CGRectMake(kScanWindowX, kScanWindowY, kScanWindowW, kScanWindowH);
     }
     return _capturelayer;
@@ -358,7 +354,7 @@
     if (!_raylayer) {
         _raylayer = [CALayer layer];
         _raylayer.frame = CGRectMake(4, 4, kScanWindowW - 8, 2);
-        _raylayer.contents = (id)[UIImage imageNamed:@"ScanResource.bundle/扫一扫线"].CGImage;
+        _raylayer.contents = (id)[UIImage imageNamed:@"ScanResource.bundle/scan_ray"].CGImage;
     }
     return _raylayer;
 }

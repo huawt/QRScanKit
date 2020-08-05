@@ -31,6 +31,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface QRScanView : UIView
 
+/// 扫码小窗
+@property (nonatomic, strong) CALayer *capturelayer;
+/// 扫描线
+@property (nonatomic, strong) CALayer *raylayer;
+/// 闪光灯
+@property (nonatomic, strong) UIButton *flashlightBtn;
+/// 提醒
+@property (nonatomic, strong) UIButton *remindBtn;
+
 /**
  是否显示闪光灯按钮
  */

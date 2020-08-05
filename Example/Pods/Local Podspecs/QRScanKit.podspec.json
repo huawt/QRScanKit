@@ -1,6 +1,6 @@
 {
   "name": "QRScanKit",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "summary": "QRScanKit.",
   "homepage": "https://github.com/huawt/QRScanKit",
   "license": {
@@ -8,11 +8,11 @@
     "file": "LICENSE"
   },
   "authors": {
-    "huwt": "ghost263sky@163.com"
+    "huawt": "ghost263sky@163.com"
   },
   "source": {
     "git": "https://github.com/huawt/QRScanKit.git",
-    "tag": "1.0.4"
+    "tag": "1.0.7"
   },
   "platforms": {
     "ios": "8.0"
