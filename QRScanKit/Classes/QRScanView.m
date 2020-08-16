@@ -282,7 +282,6 @@
         AVMetadataMachineReadableCodeObject *metadataObject = [metadataObjects objectAtIndex:0];
         if (self.delegate && [self.delegate respondsToSelector:@selector(QRScanMetadataObjectByScan:)]) {
             [self.delegate QRScanMetadataObjectByScan:metadataObject];
-            [self stopQRScan];
         }
     }
 }
