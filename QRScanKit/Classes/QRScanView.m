@@ -11,7 +11,7 @@
 #define kCaptureWidth (kKDeviceWidth - 90)
 
 #define fx ((kKDeviceWidth - fw) / 2)
-#define fy ((kKDeviceHeight / 2.0 - kCaptureWidth / 2.0) * (kIPhone5 ? 0.6 : 1))
+#define fy (kKDeviceHeight / 2.0 - kCaptureWidth / 2.0)
 #define fw (kCaptureWidth * (kIPhone5 ? 0.8 : 1))
 #define fh (kCaptureWidth * (kIPhone5 ? 0.8 : 1))
 #define kScanRayH 47
