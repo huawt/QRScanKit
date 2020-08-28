@@ -1,15 +1,13 @@
 PODS:
   - LRTools (1.0.5)
   - Masonry (1.1.0)
-  - QRScanKit (1.0.9):
+  - QRScanKit (1.1.0):
     - LRTools
     - Masonry
     - TLToastHUD
-    - ZBarSDK (~> 1.3)
     - ZXingObjCFork (~> 3.6.5)
   - TLToastHUD (1.0.1):
     - Masonry
-  - ZBarSDK (1.3.1)
   - ZXingObjCFork (3.6.5)
 
 DEPENDENCIES:
@@ -20,7 +18,6 @@ SPEC REPOS:
     - LRTools
     - Masonry
     - TLToastHUD
-    - ZBarSDK
     - ZXingObjCFork
 
 EXTERNAL SOURCES:
@@ -30,9 +27,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   LRTools: 12a0b6aa1d422888a35ada0f85835cc58d9c89f9
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  QRScanKit: 65bf1fb670699fa1254a8e346c8eb841352e2ca3
+  QRScanKit: 22f1d2452f562c5b60c7a50eab4ebeaf1f6ff29a
   TLToastHUD: fb41f37be2182f471bbfe697b9cf4bb2a7c1057f
-  ZBarSDK: 4c1b5daeb7d6cc67dc9355e690af0230a661f6ec
   ZXingObjCFork: bd6b0d90dc1793f38e91e8692c66402f3d03b3e5
 
 PODFILE CHECKSUM: 591dd9f12e2459453a571ba3d1ffe9bf116cebe3
