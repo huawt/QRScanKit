@@ -2,7 +2,7 @@
 #import "QRScanView.h"
 #import "QRScanLEDControl.h"
 #import "QRScanLanguage.h"
-#import <LRTools/LRToos.h>
+#import <LRTools/LRTools.h>
 
 #define kIPhone5 (CGRectGetHeight([UIScreen mainScreen].bounds) - 568 ? NO : YES)
 #define kKDeviceWidth [UIScreen mainScreen].bounds.size.width

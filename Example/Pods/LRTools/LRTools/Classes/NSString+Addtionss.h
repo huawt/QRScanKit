@@ -1,9 +1,3 @@
-//
-//  NSString+Addtionss.h
-//  LRTools
-//
-//  Created by WinTer on 2020/7/19.
-//
 
 #import <Foundation/Foundation.h>
 

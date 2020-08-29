@@ -1,7 +1,7 @@
 
 #import "QRScanRichLabel.h"
 #import <CoreGraphics/CoreGraphics.h>
-#import <LRTools/LRToos.h>
+#import <LRTools/LRTools.h>
 
 @interface QRScanRichLabel ()
 
