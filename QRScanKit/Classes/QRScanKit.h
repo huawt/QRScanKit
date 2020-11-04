@@ -7,6 +7,7 @@
 FOUNDATION_EXPORT double QRScanKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char QRScanKitVersionString[];
 
+#import <QRScanKit/QRCaptureLayer.h>
 #import <QRScanKit/QRScanView.h>
 #import <QRScanKit/QRScanManager.h>
 #import <QRScanKit/QRScanResultModel.h>
@@ -15,6 +16,7 @@ FOUNDATION_EXPORT const unsigned char QRScanKitVersionString[];
 
 #else
 
+#import "QRCaptureLayer.h"
 #import "QRScanView.h"
 #import "QRScanManager.h"
 #import "QRScanResultModel.h"

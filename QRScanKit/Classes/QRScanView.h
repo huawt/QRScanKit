@@ -2,6 +2,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <CoreGraphics/CoreGraphics.h>
+#import "QRCaptureLayer.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -32,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface QRScanView : UIView
 
 /// 扫码小窗
-@property (nonatomic, strong) CALayer *capturelayer;
+@property (nonatomic, strong) QRCaptureLayer *capturelayer;
 /// 扫描线
 @property (nonatomic, strong) CALayer *raylayer;
 /// 闪光灯
@@ -52,12 +53,17 @@ NS_ASSUME_NONNULL_BEGIN
 是否显示 对准提醒
 */
 @property (nonatomic, assign) BOOL showScanRemind;
+/**
+是否显示 扫描框
+*/
+@property (nonatomic, assign) BOOL showScanWindow;
 
 /**
  生成扫描视图
  */
 + (instancetype)scanViewWidthFrame:(CGRect)frame scanDelegate:(id<QRScanViewDelegate>)delegate;
 
+/// 检查是否支持扫码
 + (BOOL)checkSupportScan;
 
 /**

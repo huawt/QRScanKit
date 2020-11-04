@@ -26,6 +26,9 @@
     
     [filter setValue:data forKeyPath:@"inputMessage"];
     
+    //容错率为30%
+    [filter setValue:@"H" forKey:@"inputCorrectionLevel"];
+    
     //获取二维码过滤器生成的二维码
     CIImage *image = [filter outputImage];
     

@@ -1,7 +1,7 @@
 PODS:
   - LRTools (1.0.6)
   - Masonry (1.1.0)
-  - QRScanKit (1.1.1):
+  - QRScanKit (1.1.2):
     - LRTools
     - Masonry
     - TLToastHUD
@@ -27,10 +27,10 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   LRTools: 8721c8f060b76f126f20a73e71b93a5c1c40c8b1
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  QRScanKit: 37db2f4a10ec66650bb0d6423d32674544aa85cc
+  QRScanKit: a95342eee9a69a311ce0210a0071c9aa3475f54d
   TLToastHUD: fb41f37be2182f471bbfe697b9cf4bb2a7c1057f
   ZXingObjCFork: bd6b0d90dc1793f38e91e8692c66402f3d03b3e5
 
 PODFILE CHECKSUM: 591dd9f12e2459453a571ba3d1ffe9bf116cebe3
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0

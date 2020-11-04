@@ -126,24 +126,13 @@
 
 - (void)configCaputreWindow
 {
-    if (self.fullScreenScan == NO) {
-        if (!self.capturelayer.superlayer) {
-            [self.layer addSublayer:self.capturelayer];
-        }
-        if (!self.raylayer.superlayer) {
-            [self.capturelayer addSublayer:self.raylayer];
-        }
-    }else{
-        if (self.capturelayer.superlayer) {
-            [self.capturelayer removeFromSuperlayer];
-        }
-        if (self.raylayer.superlayer) {
-            [self.raylayer removeFromSuperlayer];
-        }
-    }
     if (!self.previewlayer.superlayer) {
         [self.layer insertSublayer:self.previewlayer atIndex:0];
     }
+    if (!self.capturelayer.superlayer) {
+        [self.layer insertSublayer:self.capturelayer above:self.previewlayer];
+    }
+    self.capturelayer.isFullScreen = self.fullScreenScan;
 }
 
 - (void)configureObserver
@@ -170,8 +159,12 @@
 - (void)setFullScreenScan:(BOOL)fullScreenScan{
     _fullScreenScan = fullScreenScan;
     [self configCaputreWindow];
-    [self fixPreviewOpacity];
     [self configRectofInterest];
+}
+
+- (void)setShowScanWindow:(BOOL)showScanWindow{
+    _showScanWindow = showScanWindow;
+    self.capturelayer.hidden = !_showScanWindow;
 }
 
 - (void)configRectofInterest{
@@ -339,12 +332,9 @@
 - (CALayer *)capturelayer
 {
     if (!_capturelayer) {
-        _capturelayer = [CALayer layer];
-        _capturelayer.masksToBounds = YES;
-        _capturelayer.bounds = CGRectMake(0, 0, kScanWindowW, 0);
-        _capturelayer.position = self.center;
-        _capturelayer.contents = (id)[UIImage imageNamed:@"ScanResource.bundle/scan_capture"].CGImage;
-        _capturelayer.frame = CGRectMake(kScanWindowX, kScanWindowY, kScanWindowW, kScanWindowH);
+        _capturelayer = [QRCaptureLayer layer];
+        _capturelayer.frame = self.bounds;
+        [_capturelayer configureCaptureContents:[UIImage imageNamed:@"ScanResource.bundle/scan_capture"] rect:CGRectMake(kScanWindowX-2, kScanWindowY-2, kScanWindowW+ 4, kScanWindowH+ 4)];
     }
     return _capturelayer;
 }
@@ -364,44 +354,9 @@
         _previewlayer = [AVCaptureVideoPreviewLayer layerWithSession:self.session];
         _previewlayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
         _previewlayer.frame = self.bounds;
-        [self fixPreviewOpacity];
     }
     
     return _previewlayer;
-}
-
-- (void)fixPreviewOpacity
-{
-    for (UIView *subView in self.subviews) {
-        if (subView.tag > 100 && subView .tag< 105) {
-            [subView removeFromSuperview];
-        }
-    }
-    
-    if (self.fullScreenScan == YES) {
-        return;
-    }
-    
-    UIView *topLayer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kKDeviceWidth, fy)];
-    topLayer.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3f];
-    topLayer.tag = 101;
-    [self insertSubview:topLayer atIndex:0];
-    
-    UIView *leftLayer = [[UIView alloc] initWithFrame:CGRectMake(0, fy, fx, fh)];
-    leftLayer.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3f];
-    leftLayer.tag = 102;
-    [self insertSubview:leftLayer atIndex:0];
-    
-    UIView *rightLayer = [[UIView alloc] initWithFrame:CGRectMake(kKDeviceWidth - fx, fy, fx, fh)];
-    rightLayer.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3f];
-    rightLayer.tag = 103;
-    [self insertSubview:rightLayer atIndex:0];
-    
-    CGFloat preLayerHeight = self.previewlayer.frame.size.height;
-    UIView *bottomLayer = [[UIView alloc] initWithFrame:CGRectMake(0, fy + fh, kKDeviceWidth, preLayerHeight - fy - fh)];
-    bottomLayer.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3f];
-    bottomLayer.tag = 104;
-    [self insertSubview:bottomLayer atIndex:0];
 }
 
 - (UIButton *)flashlightBtn

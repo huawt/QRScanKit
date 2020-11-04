@@ -1,0 +1,1 @@
+../../../../../QRScanKit/Classes/QRCaptureLayer.h
