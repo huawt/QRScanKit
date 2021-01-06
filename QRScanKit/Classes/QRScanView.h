@@ -8,6 +8,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol QRScanViewDelegate <NSObject>
 
+@optional
 /**
  扫描出结果，自动停止扫描
 
